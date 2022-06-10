@@ -1,7 +1,6 @@
 l1 = [1, 2, 3]
+res = 0
+for i in l1:
+    res += i * i
 
-for i in range(len(l1)):
-    print(i)
-    l1[i] = l1[i] * 2
-
-print(l1)
+print(res)
