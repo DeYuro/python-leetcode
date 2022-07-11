@@ -11,12 +11,14 @@ class Solution:
             sum = 0
             if l1 is not None:
                 sum += l1.val
+                l1 = l1.next
             if l2 is not None:
                 sum += l2.val
+                l2 = l2.next
             sum +=mem
 
-            mem = sum / 10
+            mem = sum // 10
 
-            ans.next = ListNode(val=sum % 10)
+            ans.next = ListNode(val=round(sum % 10))
             ans = ans.next
         return head.next
